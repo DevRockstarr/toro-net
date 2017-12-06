@@ -32,7 +32,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: {httpOnly: true,maxAge:2495000000},
-  store: new Mongostore({url: process.env.Mongo_URI})
+  store: Mongostore({url: process.env.Mongo_URI})
 }))
 
 app.use(cookieParser('test-secret'))
